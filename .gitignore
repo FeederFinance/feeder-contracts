@@ -1,0 +1,17 @@
+abi/
+artifacts/
+cache/
+coverage/
+exports/
+node_modules/
+types/
+deployments/localhost
+package-lock.json
+coverage.json
+.env
+.DS_Store
+keys.json
+.idea
+.vscode
+yarn-error.log
+*.lock

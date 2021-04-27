@@ -1,0 +1,52 @@
+{
+  "name": "genka-core-contracts",
+  "version": "1.0.0",
+  "description": "Genka.finance Core Contracts",
+  "main": "index.js",
+  "author": "Genka Team",
+  "license": "GPL-3.0-only",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "yarn lint:js && yarn lint:sol",
+    "lint:js": "eslint '{test,scripts}/**/*.js'",
+    "lint:sol": "solhint 'contracts/**/*.sol' && prettylint 'contracts/**/*.sol'",
+    "compile": "npx hardhat compile",
+    "coverage": "npx hardhat coverage",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "npx hardhat test",
+    "server:local": "npx hardhat node",
+    "server:mainnet": "npx hardhat node --fork https://bsc-dataseed.binance.org --fork-block-number 6707933",
+    "console:local": "npx hardhat console --network localhost"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@nomiclabs/hardhat-etherscan": "^2.1.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^3.4.0",
+    "@types/chai": "^4.2.16",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.41",
+    "bignumber.js": "^9.0.1",
+    "chai": "^4.3.4",
+    "chai-bignumber": "^3.0.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.23.0",
+    "ethereum-waffle": "^3.3.0",
+    "ethereumjs-util": "^7.0.10",
+    "ethers": "^5.1.0",
+    "hardhat": "^2.2.0",
+    "hardhat-deploy": "^0.7.4",
+    "hardhat-deploy-ethers": "^0.3.0-beta.7",
+    "hardhat-gas-reporter": "^1.0.4",
+    "hardhat-watcher": "^2.1.1",
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.7",
+    "solhint": "^3.3.4",
+    "solidity-coverage": "^0.7.16",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "target": "esnext",
+  "recursive": true,
+  "timeout": 20000,
+  "spec": "test/**/*.test.ts",
+  "watch-files": ["test"]
+}

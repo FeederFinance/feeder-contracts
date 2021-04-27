@@ -1,0 +1,9 @@
+dist: trusty
+language: node_js
+node_js:
+  - '12'
+install:
+  - yarn install
+script:
+  - yarn coverage
+  - yarn coveralls
